@@ -1,0 +1,14 @@
+.DS_Store
+.gradle/
+.idea/
+build/
+local.properties
+*.iml
+
+# Local reference material. These files may contain private application notes.
+5,5pro-chats/
+submit-pdfs/
+
+# Runtime output
+simulated-lock-endpoint/.runtime/
+simulated-lock-endpoint/npm-debug.log*

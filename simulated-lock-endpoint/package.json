@@ -1,0 +1,13 @@
+{
+  "name": "looklatch-simulated-lock-endpoint",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local simulated lock endpoint for the LookLatch XR prototype.",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --check server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

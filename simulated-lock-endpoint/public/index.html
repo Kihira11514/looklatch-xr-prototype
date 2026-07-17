@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LookLatch Simulated Lock</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="topbar" aria-label="Endpoint summary">
+        <div>
+          <p class="eyebrow">LookLatch XR</p>
+          <h1>Simulated Lock Endpoint</h1>
+        </div>
+        <span class="safety-badge">Simulated only</span>
+      </section>
+
+      <section class="status-grid" aria-label="Current state">
+        <article class="status-panel">
+          <div class="lock-visual" aria-hidden="true">
+            <svg viewBox="0 0 96 96" role="img">
+              <path class="shackle" d="M30 43V31c0-10 8-18 18-18s18 8 18 18v12" />
+              <rect class="body" x="22" y="40" width="52" height="40" rx="8" />
+              <circle class="keyhole" cx="48" cy="58" r="5" />
+              <path class="keyline" d="M48 63v8" />
+            </svg>
+          </div>
+          <div>
+            <p class="label">Lock state</p>
+            <p id="lockState" class="state-value">LOCKED</p>
+          </div>
+        </article>
+
+        <article class="status-panel">
+          <div>
+            <p class="label">Safety state</p>
+            <p id="safetyState" class="state-value">Idle</p>
+          </div>
+          <div>
+            <p class="label">Target</p>
+            <p id="targetId" class="target-value">demo-lock-001</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="controls" aria-label="Demo events">
+        <button data-event="target_detected">Target detected</button>
+        <button data-event="intent_held">Intent held</button>
+        <button data-event="proximity_verified">Proximity verified</button>
+        <button data-event="confirmation_required">Confirm required</button>
+        <button data-event="physical_confirmed" class="primary">Physical confirmed</button>
+        <button data-event="expired">Expire</button>
+        <button data-event="error">Error</button>
+        <button id="resetButton" class="secondary">Reset</button>
+      </section>
+
+      <section class="log-panel" aria-label="Event log">
+        <div class="section-heading">
+          <h2>Event Log</h2>
+          <p id="lastUpdated">Waiting for events</p>
+        </div>
+        <ol id="eventLog" class="event-log"></ol>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
